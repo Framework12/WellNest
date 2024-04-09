@@ -1,0 +1,93 @@
+:root {
+  --header-bg-color: #2c3e50;
+  --header-text-color: #ffffff;
+  --header-border-color: #34495e42;
+  --header-hover-color: #33333380;
+  --header-link-hover-color: #ffffff;
+  --header-button-hover-color: #34495e;
+}
+
+.header {
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  color: var(--header-text-color);
+  padding: 10px 20px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--header-border-color);
+  box-shadow: 0 2px 4px rgba(90, 90, 90, 0.5);
+  border-radius: 15px;
+}
+
+.header_logoImg {
+  height: 80px;
+  background: transparent;
+}
+
+.header_title {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  position: relative;
+  right: 9%;
+}
+
+.header_nav {
+  display: flex;
+}
+
+.header_menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+  right: 30%;
+  gap: 50px;
+}
+
+.header_menuItem {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.header_menuItem:hover {
+  transform: translateY(-3px);
+}
+
+.header_link {
+  text-decoration: none;
+  color: var(--header-link-hover-color);
+}
+
+.header_login,
+.header_appointment {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  position: relative;
+
+  right: 2%;
+}
+
+.header_login:hover,
+.header_appointment:hover {
+  transform: scale(1.05);
+  border-color: var(--header-hover-color);
+  color: var(--header-hover-color);
+}
+
+.header_login:hover::after,
+.header_appointment:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--header-hover-color);
+}
